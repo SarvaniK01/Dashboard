@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Admin Dashboard</h1>
+    <div>
+        <form id="blogForm" onsubmit="event.preventDefault();">
+      <!-- Article Heading -->
+      <h1>Article Heading</h1>
+      <input
+        id="articleHeading"
+        type="text"
+        placeholder="Article heading"
+        required
+      />
+      <br />
+
+      <!-- Article content -->
+      <h1>Article Content</h1>
+      <textarea
+        rows="2"
+        type="text"
+        id="articleContent"
+        placeholder="Article content goes here"
+        required
+      ></textarea>
+      <br />
+
+      <!-- Article Image -->
+      <h1>Article Image Url</h1>
+      <input
+        id="image-url"
+        type="url"
+        alt="articleImage"
+        placeholder="http://example.com/xyz.png"
+        required
+      />
+      <br />
+
+      <!-- Date of publishing -->
+      <h1 for="article-date">Date of Publishing</h1>
+      <input id="articleDate" type="date" name="article-date" required />
+      <br />
+
+      <!-- Submit Button -->
+      <input type="button" id="submitButton" onclick="submitForm()" value="Submit" />
+      <!-- <button id="submitButton">Submit</button> -->
+    </form>
+    </div>
+
+    <table id="display">
+        <tr>
+            <th>Heading</th>
+            <th>Content</th>
+            <th>Image URL</th>
+            <th>Date</th>
+        </tr>
+
+    </table>
+    
+    <script src="displayPosts.js" type="module"></script>
+    <script src="submittedData.js"></script>
+    <script src="data.js" type="module"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
